@@ -89,7 +89,7 @@ namespace CleanArchMvc.WebUI.Controllers
             return View(categoryVM);
         }
 
-        [HttpPost(), ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             await _categoryService.Remove(id);
